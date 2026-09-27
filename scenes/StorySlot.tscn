@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://da6lvgveggxep"]
+
+[ext_resource type="Script" uid="uid://hojbw037clu0" path="res://scenes/story_slot.gd" id="1_d0yl0"]
+
+[node name="PanelContainer" type="PanelContainer" unique_id=1906007174]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_d0yl0")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1317277546]
+layout_mode = 2

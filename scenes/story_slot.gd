@@ -1,0 +1,28 @@
+extends PanelContainer
+class_name StorySlot
+
+signal filled(slot: StorySlot, card_data: CardData)
+signal cleared(slot: StorySlot)
+
+@export var slot_index: int = 0
+var placed_card: CardData = null
+
+@onready var texture_rect: TextureRect = $TextureRect
+
+func _can_drop_data(_at_position: Vector2, data: Variant) -> bool:
+	return data is CardData
+ 
+func _drop_data(_at_position: Vector2, data: Variant) -> void:
+	placed_card = data
+	texture_rect.texture = data.texture
+	filled.emit(self, data)
+ 
+func clear() -> void:
+	placed_card = null
+	texture_rect.texture = null
+	cleared.emit(self)
+ 
+func _gui_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_RIGHT:
+		if placed_card:
+			clear()

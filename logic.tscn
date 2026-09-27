@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b0ktrrtac466k"]
+
+[ext_resource type="Script" uid="uid://d1yqg66td4dfc" path="res://story_card.gd" id="1_cpend"]
+
+[node name="Control" type="Control" unique_id=94404465]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_cpend")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2102283452]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
