@@ -1,11 +1,30 @@
 [gd_resource type="Resource" script_class="CardData" format=3 uid="uid://bbgqjx36ybj8f"]
 
 [ext_resource type="Script" uid="uid://dw3ra0m0omdm" path="res://scripts/card_data.gd" id="1_f42uc"]
+[ext_resource type="Texture2D" uid="uid://dy86mhbepf064" path="res://images/bettlenormal.png" id="1_gm3w5"]
 [ext_resource type="Texture2D" uid="uid://bgyue207yjyat" path="res://images/beetlejuice-icon.png" id="2_ligcf"]
+[ext_resource type="Script" uid="uid://dig1p2yg86in4" path="res://scripts/card_reaction.gd" id="2_wx50w"]
+[ext_resource type="Texture2D" uid="uid://bdoxx473wnqp7" path="res://images/beetlejuicehomeless.png" id="3_oxk43"]
+[ext_resource type="Texture2D" uid="uid://7mfpsu4bflab" path="res://images/beetlejuice angry.png" id="4_mqx8t"]
+
+[sub_resource type="Resource" id="Resource_u54pg"]
+script = ExtResource("2_wx50w")
+background_id = "outsideicon"
+texture = ExtResource("3_oxk43")
+metadata/_custom_type_script = "uid://dig1p2yg86in4"
+
+[sub_resource type="Resource" id="Resource_60ry7"]
+script = ExtResource("2_wx50w")
+background_id = "homeicon"
+companion_id = "mj_icon"
+texture = ExtResource("4_mqx8t")
+metadata/_custom_type_script = "uid://dig1p2yg86in4"
 
 [resource]
 script = ExtResource("1_f42uc")
 id = "bj_icon"
 display_name = "Bettle Icon"
 texture = ExtResource("2_ligcf")
+placed_texture = ExtResource("1_gm3w5")
+reactions = Array[ExtResource("2_wx50w")]([SubResource("Resource_u54pg"), SubResource("Resource_60ry7")])
 metadata/_custom_type_script = "uid://dw3ra0m0omdm"

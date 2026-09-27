@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cy32gf27sbbjl" path="res://scripts/comic_page.gd" id="1_2ycle"]
 [ext_resource type="Script" uid="uid://h3vx6auj3khl" path="res://scripts/story_rule.gd" id="2_1op7i"]
+[ext_resource type="Resource" uid="uid://b48adhsgokvp3" path="res://rules/ending_rule.tres" id="3_a42xh"]
 [ext_resource type="PackedScene" uid="uid://da6lvgveggxep" path="res://scenes/StorySlot.tscn" id="3_sd782"]
 [ext_resource type="PackedScene" uid="uid://cx27utupjdjgb" path="res://scenes/StoryCard.tscn" id="4_a42xh"]
 [ext_resource type="Texture2D" uid="uid://c8qo0asfqqx2d" path="res://images/empty-paper.png" id="4_sd782"]
@@ -13,34 +14,11 @@
 [ext_resource type="Resource" uid="uid://dkmg1b21wkx31" path="res://cards/outsideicon.tres" id="10_xii0u"]
 [ext_resource type="Texture2D" uid="uid://odjtty6l7iaf" path="res://images/cork.png" id="11_0wg6j"]
 [ext_resource type="FontFile" uid="uid://c84h3q1csev7l" path="res://images/Pixellari.ttf" id="13_a42xh"]
-
-[sub_resource type="Resource" id="Resource_qvsfe"]
-script = ExtResource("2_1op7i")
-metadata/_custom_type_script = "uid://h3vx6auj3khl"
-
-[sub_resource type="Resource" id="Resource_4a5w8"]
-script = ExtResource("2_1op7i")
-metadata/_custom_type_script = "uid://h3vx6auj3khl"
-
-[sub_resource type="Resource" id="Resource_3osoa"]
-script = ExtResource("2_1op7i")
-metadata/_custom_type_script = "uid://h3vx6auj3khl"
-
-[sub_resource type="Resource" id="Resource_o6x11"]
-script = ExtResource("2_1op7i")
-metadata/_custom_type_script = "uid://h3vx6auj3khl"
-
-[sub_resource type="Resource" id="Resource_cgo7g"]
-script = ExtResource("2_1op7i")
-metadata/_custom_type_script = "uid://h3vx6auj3khl"
-
-[sub_resource type="Resource" id="Resource_7hr8b"]
-script = ExtResource("2_1op7i")
-metadata/_custom_type_script = "uid://h3vx6auj3khl"
-
-[sub_resource type="Resource" id="Resource_0lj66"]
-script = ExtResource("2_1op7i")
-metadata/_custom_type_script = "uid://h3vx6auj3khl"
+[ext_resource type="Texture2D" uid="uid://mvs4syr3y4cp" path="res://images/endsprite.png" id="14_cghfy"]
+[ext_resource type="Texture2D" uid="uid://b7w4mqw22srqe" path="res://images/credits button.png" id="16_jj06y"]
+[ext_resource type="Script" uid="uid://pn8i3namsbto" path="res://scenes/creds_button.gd" id="17_14tlw"]
+[ext_resource type="Texture2D" uid="uid://bnr4lyjg8nkao" path="res://images/homebtn.png" id="17_ugpkn"]
+[ext_resource type="Script" uid="uid://dw3mdpxd3u0l" path="res://scenes/outcome_button.gd" id="18_ugpkn"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2ycle"]
 texture = ExtResource("4_sd782")
@@ -57,7 +35,7 @@ anchors_preset = 0
 offset_right = 1154.0
 offset_bottom = 651.0
 script = ExtResource("1_2ycle")
-rules = Array[ExtResource("2_1op7i")]([SubResource("Resource_qvsfe"), SubResource("Resource_4a5w8"), SubResource("Resource_3osoa"), SubResource("Resource_o6x11"), SubResource("Resource_cgo7g"), SubResource("Resource_7hr8b"), SubResource("Resource_0lj66")])
+rules = Array[ExtResource("2_1op7i")]([ExtResource("3_a42xh")])
 
 [node name="Panels" type="HBoxContainer" parent="." unique_id=1686303464]
 propagate_maximum_size = false
@@ -152,6 +130,14 @@ End of demo!! Thank you for playing our game!!
 Made in Godot in ~12 hours"
 horizontal_alignment = 1
 
+[node name="OutcomeSprite" type="TextureRect" parent="." unique_id=1038097245]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 128.0
+offset_right = 920.0
+offset_bottom = 488.0
+texture = ExtResource("14_cghfy")
+
 [node name="TextureRect" type="TextureRect" parent="." unique_id=410607851]
 z_index = -1
 layout_mode = 0
@@ -172,3 +158,25 @@ theme_override_fonts/font = ExtResource("13_a42xh")
 theme_override_font_sizes/font_size = 50
 text = "Bettlejus gets evicted :( "
 metadata/_edit_lock_ = true
+
+[node name="CredsButton" type="Button" parent="." unique_id=410240682]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_left = 640.0
+offset_top = 504.0
+offset_right = 740.0
+offset_bottom = 604.0
+icon = ExtResource("16_jj06y")
+expand_icon = true
+script = ExtResource("17_14tlw")
+
+[node name="OutcomeButton" type="Button" parent="." unique_id=251441414]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_left = 416.0
+offset_top = 504.0
+offset_right = 516.0
+offset_bottom = 604.0
+icon = ExtResource("17_ugpkn")
+expand_icon = true
+script = ExtResource("18_ugpkn")

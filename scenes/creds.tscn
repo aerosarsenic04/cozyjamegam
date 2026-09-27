@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://odjtty6l7iaf" path="res://images/cork.png" id="1_qgkqh"]
 [ext_resource type="FontFile" uid="uid://c84h3q1csev7l" path="res://images/Pixellari.ttf" id="2_qy27r"]
+[ext_resource type="Texture2D" uid="uid://bnr4lyjg8nkao" path="res://images/homebtn.png" id="3_jc25f"]
+[ext_resource type="Script" uid="uid://d2jg5tn7llthe" path="res://scenes/button_13.gd" id="3_qy27r"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qvsfe"]
 bg_color = Color(0.86623895, 0.7274021, 0.31259775, 1)
@@ -34,7 +36,6 @@ theme_override_fonts/font = ExtResource("2_qy27r")
 theme_override_font_sizes/font_size = 36
 text = "Art + Assets: Sumaya Hirsi and Kaylee Chau
 Code: Selina Tung
-Audio: Pixabay :)
 
 ~~~
 
@@ -42,13 +43,15 @@ Made for HackClub's JameGam entry to the Cozy Fall Game Jam!!"
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="Button" type="Button" parent="." unique_id=2095813565]
-offset_left = 472.0
+[node name="Button13" type="Button" parent="." unique_id=2095813565]
+custom_minimum_size = Vector2(100, 100)
+offset_left = 528.0
 offset_top = 504.0
-offset_right = 680.0
-offset_bottom = 592.0
-theme_override_colors/icon_normal_color = Color(0.85621876, 0.8527812, 7.70092e-07, 1)
+offset_right = 628.0
+offset_bottom = 604.0
 theme_override_fonts/font = ExtResource("2_qy27r")
 theme_override_font_sizes/font_size = 70
 theme_override_styles/normal = SubResource("StyleBoxFlat_qvsfe")
-text = "HOME"
+icon = ExtResource("3_jc25f")
+expand_icon = true
+script = ExtResource("3_qy27r")
