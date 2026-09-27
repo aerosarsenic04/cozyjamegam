@@ -14,6 +14,23 @@ var placed_character_right: CardData = null
 @onready var character_left_rect: TextureRect = $CharacterLeft
 @onready var character_right_rect: TextureRect = $CharacterRight
 
+
+func _ready() -> void:
+	_setup_texture_rect(background_rect)
+	_setup_texture_rect(character_left_rect)
+	_setup_texture_rect(character_right_rect)
+
+	character_left_rect.position = Vector2(0, 0)
+	character_left_rect.size = Vector2(size.x / 2.0, size.y)
+
+	character_right_rect.position = Vector2(size.x / 2.0, 0)
+	character_right_rect.size = Vector2(size.x / 2.0, size.y)
+
+
+func _setup_texture_rect(rect: TextureRect) -> void:
+	rect.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	rect.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	
 func _can_drop_data(_at_position: Vector2, data: Variant) -> bool:
 	return data is CardData
 

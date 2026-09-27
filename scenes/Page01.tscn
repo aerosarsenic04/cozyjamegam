@@ -77,16 +77,19 @@ metadata/_edit_lock_ = true
 
 [node name="Slot1" parent="Panels" unique_id=1906007174 instance=ExtResource("3_sd782")]
 custom_minimum_size = Vector2(300, 300)
+clip_contents = true
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_2ycle")
 
 [node name="Slot2" parent="Panels" unique_id=2113599651 instance=ExtResource("3_sd782")]
 custom_minimum_size = Vector2(300, 300)
+clip_contents = true
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_1op7i")
 
 [node name="Slot3" parent="Panels" unique_id=1843739213 instance=ExtResource("3_sd782")]
 custom_minimum_size = Vector2(300, 300)
+clip_contents = true
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_sd782")
 
@@ -105,7 +108,7 @@ grow_vertical = 0
 theme_override_constants/separation = 40
 
 [node name="Control" parent="Tray" unique_id=318016375 instance=ExtResource("4_a42xh")]
-custom_minimum_size = Vector2(140, 100)
+custom_minimum_size = Vector2(140, 80)
 layout_mode = 2
 card_data = ExtResource("5_cghfy")
 
@@ -136,16 +139,25 @@ card_data = ExtResource("10_xii0u")
 
 [node name="OutcomeLabel" type="RichTextLabel" parent="." unique_id=1319118095]
 layout_mode = 0
-offset_left = 122.0
-offset_top = 148.0
-offset_right = 162.0
-offset_bottom = 188.0
+offset_left = 256.0
+offset_top = 248.0
+offset_right = 896.0
+offset_bottom = 424.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("13_a42xh")
+theme_override_font_sizes/normal_font_size = 27
+text = "And so Bettlejus fails and Mamajus is so angry that she banishes him for the night...
+
+End of demo!! Thank you for playing our game!!
+Made in Godot in ~12 hours"
+horizontal_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=410607851]
 z_index = -1
 layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
+mouse_filter = 2
 texture = ExtResource("11_0wg6j")
 metadata/_edit_lock_ = true
 

@@ -21,8 +21,11 @@ func _get_drag_data(_at_position: Vector2) -> Variant:
 
 	var preview := TextureRect.new()
 	preview.texture = card_data.texture
+	preview.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	preview.stretch_mode = TextureRect.STRETCH_SCALE
 	preview.custom_minimum_size = size
+	preview.size = size
 	preview.modulate.a = 0.85
 	set_drag_preview(preview)
-	
-	return card_data
+
+	return card_data 
