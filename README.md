@@ -1,3 +1,3 @@
-<a id="readme-top"></a>
-MADE BY US NOOB NOOBS FOR COZY FALL GAME JAM AND JAME GAM
-SUMAYA TEST  THIS TO PULL
+Find out how Beetlejuice gets evicted by piecing together the story yourself!
+
+This game was created using Godot's GDScript for the Cozy Fall Jam 2026. 
