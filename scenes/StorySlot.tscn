@@ -2,10 +2,35 @@
 
 [ext_resource type="Script" uid="uid://hojbw037clu0" path="res://scenes/story_slot.gd" id="1_d0yl0"]
 
-[node name="PanelContainer" type="PanelContainer" unique_id=1906007174]
+[node name="PanelContainer" type="Panel" unique_id=2046639698]
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_d0yl0")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1317277546]
-layout_mode = 2
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BackgroundRect" type="TextureRect" parent="." unique_id=508275179]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CharacterLeft" type="TextureRect" parent="." unique_id=1727815158]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+
+[node name="CharacterRight" type="TextureRect" parent="." unique_id=308822731]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2

@@ -1,4 +1,4 @@
-extends PanelContainer
+extends Panel
 class_name StorySlot
 
 signal filled(slot: StorySlot)

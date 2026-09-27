@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://dig1p2yg86in4" path="res://scripts/card_reaction.gd" id="1_s1rs2"]
 [ext_resource type="Texture2D" uid="uid://dy86mhbepf064" path="res://images/bettlenormal.png" id="2_2nqit"]
 [ext_resource type="Texture2D" uid="uid://7mfpsu4bflab" path="res://images/beetlejuice angry.png" id="3_t1h86"]
+[ext_resource type="Texture2D" uid="uid://bdoxx473wnqp7" path="res://images/beetlejuicehomeless.png" id="4_lmmu5"]
 
 [sub_resource type="Resource" id="Resource_lgc0k"]
 script = ExtResource("1_s1rs2")
@@ -14,9 +15,15 @@ metadata/_custom_type_script = "uid://dig1p2yg86in4"
 
 [sub_resource type="Resource" id="Resource_b0lq1"]
 script = ExtResource("1_s1rs2")
-background_id = "outsidebg"
+background_id = "homebg"
 companion_id = "mj_angry"
 texture = ExtResource("3_t1h86")
+metadata/_custom_type_script = "uid://dig1p2yg86in4"
+
+[sub_resource type="Resource" id="Resource_enw8y"]
+script = ExtResource("1_s1rs2")
+background_id = "outsidebg"
+texture = ExtResource("4_lmmu5")
 metadata/_custom_type_script = "uid://dig1p2yg86in4"
 
 [resource]
@@ -24,5 +31,5 @@ script = ExtResource("1_1c1br")
 id = "bj_normal"
 display_name = "Bettlejus normal"
 texture = ExtResource("2_2nqit")
-reactions = Array[ExtResource("1_s1rs2")]([SubResource("Resource_lgc0k"), SubResource("Resource_b0lq1")])
+reactions = Array[ExtResource("1_s1rs2")]([SubResource("Resource_lgc0k"), SubResource("Resource_b0lq1"), SubResource("Resource_enw8y")])
 metadata/_custom_type_script = "uid://dw3ra0m0omdm"

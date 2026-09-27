@@ -13,7 +13,7 @@ func _ready() -> void:
 
 func _update_visual() -> void:
 	if texture_rect and card_data:
-		texture_rect.tecture = card_data.texture
+		texture_rect.texture = card_data.texture
 
 func _get_drag_data(_at_position: Vector2) -> Variant:
 	if card_data == null:

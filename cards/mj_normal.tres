@@ -1,11 +1,28 @@
 [gd_resource type="Resource" script_class="CardData" format=3 uid="uid://dk0glohictpfc"]
 
+[ext_resource type="Script" uid="uid://dig1p2yg86in4" path="res://scripts/card_reaction.gd" id="1_fhmxc"]
 [ext_resource type="Script" uid="uid://dw3ra0m0omdm" path="res://scripts/card_data.gd" id="1_orm51"]
+[ext_resource type="Texture2D" uid="uid://c5vawnwdkmy33" path="res://images/mamjuice angry.png" id="2_nodqn"]
 [ext_resource type="Texture2D" uid="uid://ckfgmgcoem5y6" path="res://images/mamajuice normal.png" id="2_oyswl"]
+
+[sub_resource type="Resource" id="Resource_g35ou"]
+script = ExtResource("1_fhmxc")
+background_id = "schoolbg"
+companion_id = "bj_normal"
+texture = ExtResource("2_nodqn")
+metadata/_custom_type_script = "uid://dig1p2yg86in4"
+
+[sub_resource type="Resource" id="Resource_a0b0a"]
+script = ExtResource("1_fhmxc")
+background_id = "homebg"
+companion_id = "bj_normal"
+texture = ExtResource("2_nodqn")
+metadata/_custom_type_script = "uid://dig1p2yg86in4"
 
 [resource]
 script = ExtResource("1_orm51")
 id = "mj_normal"
 display_name = "mamajus normal"
 texture = ExtResource("2_oyswl")
+reactions = Array[ExtResource("1_fhmxc")]([SubResource("Resource_g35ou"), SubResource("Resource_a0b0a")])
 metadata/_custom_type_script = "uid://dw3ra0m0omdm"

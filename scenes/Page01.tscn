@@ -1,3 +1,162 @@
 [gd_scene format=3 uid="uid://dl71b88uh1oyr"]
 
-[node name="Page01" type="Node2D" unique_id=633637006]
+[ext_resource type="Script" uid="uid://cy32gf27sbbjl" path="res://scripts/comic_page.gd" id="1_2ycle"]
+[ext_resource type="Script" uid="uid://h3vx6auj3khl" path="res://scripts/story_rule.gd" id="2_1op7i"]
+[ext_resource type="PackedScene" uid="uid://da6lvgveggxep" path="res://scenes/StorySlot.tscn" id="3_sd782"]
+[ext_resource type="PackedScene" uid="uid://cx27utupjdjgb" path="res://scenes/StoryCard.tscn" id="4_a42xh"]
+[ext_resource type="Texture2D" uid="uid://c8qo0asfqqx2d" path="res://images/empty-paper.png" id="4_sd782"]
+[ext_resource type="Resource" uid="uid://bbgqjx36ybj8f" path="res://cards/bj_icon.tres" id="5_cghfy"]
+[ext_resource type="Resource" uid="uid://1l85qdel1hfa" path="res://cards/mj_icon.tres" id="6_n1fl6"]
+[ext_resource type="Resource" uid="uid://bbkm3436grwex" path="res://cards/homeicon.tres" id="7_jj06y"]
+[ext_resource type="Resource" uid="uid://cbgjm06g66f1o" path="res://cards/testfail.tres" id="8_ugpkn"]
+[ext_resource type="Resource" uid="uid://c5r3noq4ii16u" path="res://cards/schoolicon.tres" id="9_14tlw"]
+[ext_resource type="Resource" uid="uid://dkmg1b21wkx31" path="res://cards/outsideicon.tres" id="10_xii0u"]
+[ext_resource type="Texture2D" uid="uid://odjtty6l7iaf" path="res://images/cork.png" id="11_0wg6j"]
+[ext_resource type="FontFile" uid="uid://c84h3q1csev7l" path="res://images/Pixellari.ttf" id="13_a42xh"]
+
+[sub_resource type="Resource" id="Resource_qvsfe"]
+script = ExtResource("2_1op7i")
+metadata/_custom_type_script = "uid://h3vx6auj3khl"
+
+[sub_resource type="Resource" id="Resource_4a5w8"]
+script = ExtResource("2_1op7i")
+metadata/_custom_type_script = "uid://h3vx6auj3khl"
+
+[sub_resource type="Resource" id="Resource_3osoa"]
+script = ExtResource("2_1op7i")
+metadata/_custom_type_script = "uid://h3vx6auj3khl"
+
+[sub_resource type="Resource" id="Resource_o6x11"]
+script = ExtResource("2_1op7i")
+metadata/_custom_type_script = "uid://h3vx6auj3khl"
+
+[sub_resource type="Resource" id="Resource_cgo7g"]
+script = ExtResource("2_1op7i")
+metadata/_custom_type_script = "uid://h3vx6auj3khl"
+
+[sub_resource type="Resource" id="Resource_7hr8b"]
+script = ExtResource("2_1op7i")
+metadata/_custom_type_script = "uid://h3vx6auj3khl"
+
+[sub_resource type="Resource" id="Resource_0lj66"]
+script = ExtResource("2_1op7i")
+metadata/_custom_type_script = "uid://h3vx6auj3khl"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2ycle"]
+texture = ExtResource("4_sd782")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1op7i"]
+texture = ExtResource("4_sd782")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sd782"]
+texture = ExtResource("4_sd782")
+
+[node name="Control" type="Control" unique_id=1369531828]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1154.0
+offset_bottom = 651.0
+script = ExtResource("1_2ycle")
+rules = Array[ExtResource("2_1op7i")]([SubResource("Resource_qvsfe"), SubResource("Resource_4a5w8"), SubResource("Resource_3osoa"), SubResource("Resource_o6x11"), SubResource("Resource_cgo7g"), SubResource("Resource_7hr8b"), SubResource("Resource_0lj66")])
+
+[node name="Panels" type="HBoxContainer" parent="." unique_id=1686303464]
+propagate_maximum_size = false
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 64.0
+offset_top = -175.5
+offset_right = -66.0
+offset_bottom = 124.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 62
+metadata/_edit_lock_ = true
+
+[node name="Slot1" parent="Panels" unique_id=1906007174 instance=ExtResource("3_sd782")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_2ycle")
+
+[node name="Slot2" parent="Panels" unique_id=2113599651 instance=ExtResource("3_sd782")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_1op7i")
+
+[node name="Slot3" parent="Panels" unique_id=1843739213 instance=ExtResource("3_sd782")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_sd782")
+
+[node name="Tray" type="HBoxContainer" parent="." unique_id=776841375]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 64.0
+offset_top = -187.0
+offset_right = -66.0
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 40
+
+[node name="Control" parent="Tray" unique_id=318016375 instance=ExtResource("4_a42xh")]
+custom_minimum_size = Vector2(140, 100)
+layout_mode = 2
+card_data = ExtResource("5_cghfy")
+
+[node name="Control2" parent="Tray" unique_id=935222431 instance=ExtResource("4_a42xh")]
+custom_minimum_size = Vector2(140, 100)
+layout_mode = 2
+card_data = ExtResource("6_n1fl6")
+
+[node name="Control3" parent="Tray" unique_id=1356192862 instance=ExtResource("4_a42xh")]
+custom_minimum_size = Vector2(140, 100)
+layout_mode = 2
+card_data = ExtResource("7_jj06y")
+
+[node name="Control4" parent="Tray" unique_id=659442448 instance=ExtResource("4_a42xh")]
+custom_minimum_size = Vector2(140, 100)
+layout_mode = 2
+card_data = ExtResource("8_ugpkn")
+
+[node name="Control5" parent="Tray" unique_id=1935679609 instance=ExtResource("4_a42xh")]
+custom_minimum_size = Vector2(140, 100)
+layout_mode = 2
+card_data = ExtResource("9_14tlw")
+
+[node name="Control6" parent="Tray" unique_id=788165608 instance=ExtResource("4_a42xh")]
+custom_minimum_size = Vector2(140, 100)
+layout_mode = 2
+card_data = ExtResource("10_xii0u")
+
+[node name="OutcomeLabel" type="RichTextLabel" parent="." unique_id=1319118095]
+layout_mode = 0
+offset_left = 122.0
+offset_top = 148.0
+offset_right = 162.0
+offset_bottom = 188.0
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=410607851]
+z_index = -1
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("11_0wg6j")
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="TextureRect" unique_id=1118480676]
+layout_mode = 0
+offset_left = 312.0
+offset_top = 72.0
+offset_right = 841.0
+offset_bottom = 136.0
+theme_override_colors/font_color = Color(0.008607308, 0.0017342089, 0.117708355, 1)
+theme_override_fonts/font = ExtResource("13_a42xh")
+theme_override_font_sizes/font_size = 50
+text = "Bettlejus gets evicted :( "
+metadata/_edit_lock_ = true
