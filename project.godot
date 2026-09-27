@@ -19,6 +19,10 @@ run/main_scene="uid://b2lnsqvgc64o7"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+StoryManager="*uid://k3ybqgthmuoj"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")

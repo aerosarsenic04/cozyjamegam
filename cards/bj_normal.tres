@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://c6cgn7s0juj6g"]
+
+[ext_resource type="Script" uid="uid://dw3ra0m0omdm" path="res://scripts/card_data.gd" id="1_1c1br"]
+[ext_resource type="Texture2D" uid="uid://dy86mhbepf064" path="res://images/bettlenormal.png" id="2_2nqit"]
+
+[resource]
+script = ExtResource("1_1c1br")
+id = "bj_normal"
+display_name = "Bettlejus normal"
+texture = ExtResource("2_2nqit")
+metadata/_custom_type_script = "uid://dw3ra0m0omdm"

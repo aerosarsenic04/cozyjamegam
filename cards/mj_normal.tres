@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://dk0glohictpfc"]
+
+[ext_resource type="Script" uid="uid://dw3ra0m0omdm" path="res://scripts/card_data.gd" id="1_orm51"]
+[ext_resource type="Texture2D" uid="uid://ckfgmgcoem5y6" path="res://images/mamajuice normal.png" id="2_oyswl"]
+
+[resource]
+script = ExtResource("1_orm51")
+id = "mj_normal"
+display_name = "mamajus normal"
+texture = ExtResource("2_oyswl")
+metadata/_custom_type_script = "uid://dw3ra0m0omdm"
