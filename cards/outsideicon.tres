@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://dkmg1b21wkx31"]
+
+[ext_resource type="Script" uid="uid://dw3ra0m0omdm" path="res://scripts/card_data.gd" id="1_73fur"]
+[ext_resource type="Texture2D" uid="uid://d04j8hvxiqk1y" path="res://images/outsidebg.png" id="1_w7a3j"]
+[ext_resource type="Script" uid="uid://dig1p2yg86in4" path="res://scripts/card_reaction.gd" id="2_opmhj"]
+[ext_resource type="Texture2D" uid="uid://bf2ybc4lvffii" path="res://images/outsideicon.png" id="2_tvuek"]
+
+[resource]
+script = ExtResource("1_73fur")
+id = "outsideicon"
+display_name = "OutsideIcon"
+category = 1
+texture = ExtResource("2_tvuek")
+placed_texture = ExtResource("1_w7a3j")
+metadata/_custom_type_script = "uid://dw3ra0m0omdm"

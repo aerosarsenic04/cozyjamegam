@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://bsanekxhn7okc"]
+
+[ext_resource type="Script" uid="uid://dw3ra0m0omdm" path="res://scripts/card_data.gd" id="1_5c2pr"]
+[ext_resource type="Texture2D" uid="uid://c20w1aq0pnovq" path="res://images/beetlejuice happy.png" id="2_nqeh5"]
+
+[resource]
+script = ExtResource("1_5c2pr")
+id = "bj_happy"
+display_name = "bettle happy"
+texture = ExtResource("2_nqeh5")
+metadata/_custom_type_script = "uid://dw3ra0m0omdm"

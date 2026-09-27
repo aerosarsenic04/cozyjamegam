@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://bbkm3436grwex"]
+
+[ext_resource type="Texture2D" uid="uid://rrtdtuii63uq" path="res://images/homebg.png" id="1_545x5"]
+[ext_resource type="Script" uid="uid://dw3ra0m0omdm" path="res://scripts/card_data.gd" id="1_pvjnm"]
+[ext_resource type="Texture2D" uid="uid://b4toj7176kp71" path="res://images/home-icon.png" id="2_aa3w0"]
+[ext_resource type="Script" uid="uid://dig1p2yg86in4" path="res://scripts/card_reaction.gd" id="2_juhvi"]
+
+[resource]
+script = ExtResource("1_pvjnm")
+id = "homeicon"
+display_name = "HomeIcon"
+category = 1
+texture = ExtResource("2_aa3w0")
+placed_texture = ExtResource("1_545x5")
+metadata/_custom_type_script = "uid://dw3ra0m0omdm"

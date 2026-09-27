@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="StoryRule" format=3 uid="uid://b48adhsgokvp3"]
+
+[ext_resource type="Script" uid="uid://h3vx6auj3khl" path="res://scripts/story_rule.gd" id="1_ndvpj"]
+
+[resource]
+script = ExtResource("1_ndvpj")
+slot_backgrounds = Array[String](["schoolbg", "homebg", "outsidebg"])
+slot_left_characters = Array[String](["bj_normal", "mj_normal", "bj_normal"])
+slot_right_characters = Array[String]([""])
+metadata/_custom_type_script = "uid://h3vx6auj3khl"
