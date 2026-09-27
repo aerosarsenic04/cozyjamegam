@@ -1,7 +1,15 @@
 [gd_resource type="Resource" script_class="CardData" format=3 uid="uid://c5r3noq4ii16u"]
 
+[ext_resource type="Texture2D" uid="uid://c8rtqsxwo5q1e" path="res://images/schoolbg.png" id="1_3j3wy"]
+[ext_resource type="Script" uid="uid://dig1p2yg86in4" path="res://scripts/card_reaction.gd" id="1_yafkp"]
 [ext_resource type="Script" uid="uid://dw3ra0m0omdm" path="res://scripts/card_data.gd" id="1_yntm8"]
+[ext_resource type="Texture2D" uid="uid://8mw34drad3a5" path="res://images/schoolbgicon.png" id="2_2h3u7"]
 
 [resource]
 script = ExtResource("1_yntm8")
+id = "schoolicon"
+display_name = "SchoolIcon"
+category = 1
+texture = ExtResource("2_2h3u7")
+placed_texture = ExtResource("1_3j3wy")
 metadata/_custom_type_script = "uid://dw3ra0m0omdm"

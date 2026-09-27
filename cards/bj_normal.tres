@@ -1,11 +1,17 @@
 [gd_resource type="Resource" script_class="CardData" format=3 uid="uid://c6cgn7s0juj6g"]
 
 [ext_resource type="Script" uid="uid://dw3ra0m0omdm" path="res://scripts/card_data.gd" id="1_1c1br"]
+[ext_resource type="Script" uid="uid://dig1p2yg86in4" path="res://scripts/card_reaction.gd" id="1_s1rs2"]
 [ext_resource type="Texture2D" uid="uid://dy86mhbepf064" path="res://images/bettlenormal.png" id="2_2nqit"]
+
+[sub_resource type="Resource" id="Resource_lgc0k"]
+script = ExtResource("1_s1rs2")
+metadata/_custom_type_script = "uid://dig1p2yg86in4"
 
 [resource]
 script = ExtResource("1_1c1br")
 id = "bj_normal"
 display_name = "Bettlejus normal"
 texture = ExtResource("2_2nqit")
+reactions = Array[ExtResource("1_s1rs2")]([SubResource("Resource_lgc0k")])
 metadata/_custom_type_script = "uid://dw3ra0m0omdm"

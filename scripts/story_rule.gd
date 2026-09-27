@@ -1,10 +1,10 @@
 extends Resource
 class_name StoryRule
-
-
-@export var slot_requirements: Array[String] = []
-@export var order_matters: bool = true
-
+ 
+@export var slot_backgrounds: Array[String] = []
+@export var slot_left_characters: Array[String] = []
+@export var slot_right_characters: Array[String] = []
+ 
 @export var required_flags: Array[String] = []
  
 @export var sets_flags: Array[String] = []

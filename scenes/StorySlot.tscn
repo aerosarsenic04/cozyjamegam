@@ -1,40 +1,11 @@
 [gd_scene format=3 uid="uid://da6lvgveggxep"]
 
-[sub_resource type="GDScript" id="GDScript_wobky"]
-script/source = "extends PanelContainer
-class_name StorySlot
-
-signal filled(slot: StorySlot, card_data: CardData)
-signal cleared(slot: StorySlot)
-
-@export var slot_index: int = 0
-var placed_card: CardData = null
-
-@onready var texture_rect: TextureRect = $TextureRect
-
-func _can_drop_data(_at_position: Vector2, data: Variant) -> bool:
-	return data is CardData
- 
-func _drop_data(_at_position: Vector2, data: Variant) -> void:
-	placed_card = data
-	texture_rect.texture = data.texture
-	filled.emit(self, data)
- 
-func clear() -> void:
-	placed_card = null
-	texture_rect.texture = null
-	cleared.emit(self)
- 
-func _gui_input(event: InputEvent) -> void:
-	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_RIGHT:
-		if placed_card:
-			clear()
-"
+[ext_resource type="Script" uid="uid://hojbw037clu0" path="res://scenes/story_slot.gd" id="1_d0yl0"]
 
 [node name="PanelContainer" type="PanelContainer" unique_id=1906007174]
 offset_right = 40.0
 offset_bottom = 40.0
-script = SubResource("GDScript_wobky")
+script = ExtResource("1_d0yl0")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1317277546]
 layout_mode = 2

@@ -1,7 +1,11 @@
 [gd_resource type="Resource" script_class="CardData" format=3 uid="uid://1l85qdel1hfa"]
 
 [ext_resource type="Script" uid="uid://dw3ra0m0omdm" path="res://scripts/card_data.gd" id="1_423mp"]
+[ext_resource type="Texture2D" uid="uid://bb81d1bam2opc" path="res://images/beetlemama-icon.png" id="2_ss71p"]
 
 [resource]
 script = ExtResource("1_423mp")
+id = "mj_icon"
+display_name = "MamaIcon"
+texture = ExtResource("2_ss71p")
 metadata/_custom_type_script = "uid://dw3ra0m0omdm"

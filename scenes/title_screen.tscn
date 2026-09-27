@@ -1,3 +1,11 @@
 [gd_scene format=3 uid="uid://b2lnsqvgc64o7"]
 
+[ext_resource type="Texture2D" uid="uid://bk00rsmdip85t" path="res://images/open screen.png" id="1_fgkus"]
+
 [node name="TitleScreen" type="Node2D" unique_id=2065914734]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1062293051]
+z_index = -1
+offset_right = 1155.0
+offset_bottom = 648.0
+texture = ExtResource("1_fgkus")

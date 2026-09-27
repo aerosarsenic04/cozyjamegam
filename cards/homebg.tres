@@ -1,7 +1,13 @@
 [gd_resource type="Resource" script_class="CardData" format=3 uid="uid://ds5kas5oad1vc"]
 
 [ext_resource type="Script" uid="uid://dw3ra0m0omdm" path="res://scripts/card_data.gd" id="1_qkdko"]
+[ext_resource type="Script" uid="uid://dig1p2yg86in4" path="res://scripts/card_reaction.gd" id="1_thkwh"]
+[ext_resource type="Texture2D" uid="uid://rrtdtuii63uq" path="res://images/homebg.png" id="2_3todx"]
 
 [resource]
 script = ExtResource("1_qkdko")
+id = "homebg"
+display_name = "Home"
+category = 1
+texture = ExtResource("2_3todx")
 metadata/_custom_type_script = "uid://dw3ra0m0omdm"

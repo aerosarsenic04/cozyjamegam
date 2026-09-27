@@ -1,10 +1,9 @@
 extends Node
  
- 
 signal outcome_triggered(rule: StoryRule)
-signal no_match_found(placed_ids: Array)
+signal no_match_found(left_ids: Array, right_ids: Array, bg_ids: Array)
  
-var flags: Dictionary = {}          
+var flags: Dictionary = {}
 var unlocked_cards: Dictionary = {}
  
 func set_flag(flag_name: String) -> void:
@@ -18,22 +17,27 @@ func unlock_card(id: String) -> void:
  
 func is_unlocked(id: String) -> bool:
 	return unlocked_cards.get(id, false)
-
+ 
 func evaluate(slots: Array, rules: Array[StoryRule]) -> StoryRule:
-	var placed_ids: Array[String] = []
+	var left_ids: Array[String] = []
+	var right_ids: Array[String] = []
+	var bg_ids: Array[String] = []
+ 
 	for slot in slots:
-		if slot.placed_card == null:
-			return null  
-		placed_ids.append(slot.placed_card.id)
+		if slot.placed_background == null:
+			return null
+		left_ids.append(slot.placed_character_left.id if slot.placed_character_left else "")
+		right_ids.append(slot.placed_character_right.id if slot.placed_character_right else "")
+		bg_ids.append(slot.placed_background.id)
  
 	for rule in rules:
 		if not _flags_satisfied(rule):
 			continue
-		if _matches(rule, placed_ids):
+		if _matches(rule, left_ids, right_ids, bg_ids):
 			_trigger(rule)
 			return rule
  
-	no_match_found.emit(placed_ids)
+	no_match_found.emit(left_ids, right_ids, bg_ids)
 	return null
  
 func _flags_satisfied(rule: StoryRule) -> bool:
@@ -42,25 +46,26 @@ func _flags_satisfied(rule: StoryRule) -> bool:
 			return false
 	return true
  
-func _matches(rule: StoryRule, placed_ids: Array[String]) -> bool:
-	if rule.slot_requirements.size() != placed_ids.size():
+func _matches(rule: StoryRule, left_ids: Array[String], right_ids: Array[String], bg_ids: Array[String]) -> bool:
+	if rule.slot_backgrounds.size() != bg_ids.size():
 		return false
  
-	if rule.order_matters:
-		for i in placed_ids.size():
-			var required := rule.slot_requirements[i]
-			if required != "" and required != placed_ids[i]:
+	for i in bg_ids.size():
+		var req_bg := rule.slot_backgrounds[i]
+		if req_bg != "" and req_bg != bg_ids[i]:
+			return false
+ 
+		if i < rule.slot_left_characters.size():
+			var req_left := rule.slot_left_characters[i]
+			if req_left != "" and req_left != left_ids[i]:
 				return false
-		return true
-	else:
-		var remaining := placed_ids.duplicate()
-		for required in rule.slot_requirements:
-			if required == "":
-				continue
-			if not remaining.has(required):
+ 
+		if i < rule.slot_right_characters.size():
+			var req_right := rule.slot_right_characters[i]
+			if req_right != "" and req_right != right_ids[i]:
 				return false
-			remaining.erase(required)
-		return true
+ 
+	return true
  
 func _trigger(rule: StoryRule) -> void:
 	for f in rule.sets_flags:
