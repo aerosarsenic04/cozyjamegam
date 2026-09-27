@@ -1,10 +1,16 @@
 [gd_resource type="Resource" script_class="StoryRule" format=3 uid="uid://b48adhsgokvp3"]
 
 [ext_resource type="Script" uid="uid://h3vx6auj3khl" path="res://scripts/story_rule.gd" id="1_ndvpj"]
+[ext_resource type="Texture2D" uid="uid://mvs4syr3y4cp" path="res://images/endsprite.png" id="1_u54pg"]
 
 [resource]
 script = ExtResource("1_ndvpj")
-slot_backgrounds = Array[String](["schoolbg", "homebg", "outsidebg"])
-slot_left_characters = Array[String](["bj_normal", "mj_normal", "bj_normal"])
-slot_right_characters = Array[String]([""])
+slot_backgrounds = Array[String](["schoolicon", "homeicon", "outsideicon"])
+slot_left_characters = Array[String](["bj_icon", "bj_icon", "bj_icon"])
+slot_right_characters = Array[String](["testfail", "mj_icon", ""])
+outcome_text = "And so Bettlejus fails and Mamajus is so angry that she banishes him for the night...
+
+End of demo!! Thank you for playing our game!!
+Made in Godot in ~12 hours"
+outcome_sprite = ExtResource("1_u54pg")
 metadata/_custom_type_script = "uid://h3vx6auj3khl"

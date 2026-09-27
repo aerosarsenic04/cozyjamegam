@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dvku3v4byqdc2"]
+
+[ext_resource type="Texture2D" uid="uid://ra6hodp3jpmv" path="res://images/instructions.png" id="1_cttpo"]
+[ext_resource type="Texture2D" uid="uid://bnr4lyjg8nkao" path="res://images/homebtn.png" id="2_wyhe8"]
+[ext_resource type="Script" uid="uid://d2jg5tn7llthe" path="res://scenes/button_13.gd" id="3_wyhe8"]
+
+[node name="Inst" type="Node2D" unique_id=1940353606]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=440301016]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_cttpo")
+
+[node name="Button" type="Button" parent="." unique_id=157570248]
+custom_minimum_size = Vector2(100, 100)
+offset_left = 528.0
+offset_top = 512.0
+offset_right = 628.0
+offset_bottom = 612.0
+icon = ExtResource("2_wyhe8")
+expand_icon = true
+script = ExtResource("3_wyhe8")

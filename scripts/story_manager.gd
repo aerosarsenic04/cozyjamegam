@@ -22,21 +22,51 @@ func evaluate(slots: Array, rules: Array[StoryRule]) -> StoryRule:
 	var left_ids: Array[String] = []
 	var right_ids: Array[String] = []
 	var bg_ids: Array[String] = []
- 
+
 	for slot in slots:
 		if slot.placed_background == null:
 			return null
-		left_ids.append(slot.placed_character_left.id if slot.placed_character_left else "")
-		right_ids.append(slot.placed_character_right.id if slot.placed_character_right else "")
+
+		left_ids.append(
+			slot.placed_character_left.id
+			if slot.placed_character_left
+			else ""
+		)
+
+		right_ids.append(
+			slot.placed_character_right.id
+			if slot.placed_character_right
+			else ""
+		)
+
 		bg_ids.append(slot.placed_background.id)
- 
-	for rule in rules:
+
+	print("=== EVALUATING RULES ===")
+	print("BG:    ", bg_ids)
+	print("LEFT:  ", left_ids)
+	print("RIGHT: ", right_ids)
+
+	for i in rules.size():
+		var rule: StoryRule = rules[i]
+
+		print("--- RULE ", i, " ---")
+		print("BG:    ", rule.slot_backgrounds)
+		print("LEFT:  ", rule.slot_left_characters)
+		print("RIGHT: ", rule.slot_right_characters)
+		print("FLAGS: ", rule.required_flags)
+
 		if not _flags_satisfied(rule):
+			print("FAILED: required flags")
 			continue
+
 		if _matches(rule, left_ids, right_ids, bg_ids):
+			print("******** MATCHED RULE ", i, " ********")
 			_trigger(rule)
 			return rule
- 
+
+		print("FAILED: card/slot values don't match")
+
+	print("=== NO MATCH ===")
 	no_match_found.emit(left_ids, right_ids, bg_ids)
 	return null
  

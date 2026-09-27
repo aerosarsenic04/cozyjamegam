@@ -2,8 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://bk00rsmdip85t" path="res://images/open screen.png" id="1_fgkus"]
 [ext_resource type="Texture2D" uid="uid://dwbswp7knc2xl" path="res://images/play button.png" id="2_mgrm8"]
+[ext_resource type="Script" uid="uid://iaesg4epinrn" path="res://scenes/button.gd" id="3_3yumr"]
 [ext_resource type="Texture2D" uid="uid://c4p7bv5y7y5cc" path="res://images/instructions button.png" id="3_dc4i4"]
 [ext_resource type="Texture2D" uid="uid://b7w4mqw22srqe" path="res://images/credits button.png" id="4_e54dn"]
+[ext_resource type="Script" uid="uid://482c3cc7y11o" path="res://scenes/button_2.gd" id="5_cs5ya"]
+[ext_resource type="Script" uid="uid://bwx8r8qbcgmcc" path="res://scenes/button_3.gd" id="7_mykxm"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qvsfe"]
 
@@ -28,6 +31,7 @@ offset_bottom = 542.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_qvsfe")
 icon = ExtResource("2_mgrm8")
 expand_icon = true
+script = ExtResource("3_3yumr")
 
 [node name="Button2" type="Button" parent="TextureRect" unique_id=873980110]
 layout_mode = 0
@@ -38,6 +42,7 @@ offset_bottom = 548.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_4a5w8")
 icon = ExtResource("3_dc4i4")
 expand_icon = true
+script = ExtResource("5_cs5ya")
 
 [node name="Button3" type="Button" parent="TextureRect" unique_id=24746716]
 layout_mode = 0
@@ -49,3 +54,4 @@ pivot_offset = Vector2(457, 369)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_3osoa")
 icon = ExtResource("4_e54dn")
 expand_icon = true
+script = ExtResource("7_mykxm")
